@@ -34,7 +34,7 @@ let rendererConfig = {
       {
         test: /\.(js|vue)$/,
         enforce: 'pre',
-        exclude: /node_modules/,
+        exclude: /node_modules | (index.ejs)/,
         use: {
           loader: 'eslint-loader',
           options: {
@@ -65,7 +65,7 @@ let rendererConfig = {
       {
         test: /\.js$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules | (index.ejs)/
       },
       {
         test: /\.node$/,

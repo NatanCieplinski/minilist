@@ -5,12 +5,12 @@ module.exports = {
       disableHostCheck: true,
       overlay: {
          warnings: true,
-         errors: true
-      }
+         errors: true,
+      },
    },
    pwa: {
       workboxOptions: {
-         skipWaiting: true
-      }
-   }
-}
+         skipWaiting: true,
+      },
+   },
+};

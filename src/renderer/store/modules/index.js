@@ -1,14 +1,15 @@
 /**
- * The file enables `@/store/index.js` to import all vuex modules
- * in a one-shot manner. There should not be any reason to edit this file.
+ * Automatically imports all the modules and exports as a single module object
  */
+const requireModule = require.context(".", false, /\.store\.js$/);
+const modules = {};
 
-const files = require.context('.', false, /\.+store\.js$/)
-const modules = {}
+requireModule.keys().forEach(filename => {
+   const moduleName = filename.replace(/(\.\/|\.store\.js)/g, ""); // create the module name from fileName
+   // remove the store.js extension and capitalize
 
-files.keys().forEach(key => {
-   if (key === './index.js') return
-   modules[key.replace(/(\.\/|\.store\.js)/g, '')] = files(key).default
-})
+   modules[moduleName] =
+      requireModule(filename).default || requireModule(filename);
+});
 
-export default modules
+export default modules;

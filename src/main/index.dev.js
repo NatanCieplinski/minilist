@@ -8,15 +8,13 @@
 /* eslint-disable */
 
 // Install `electron-debug` with `devtron`
-require('electron-debug')({ showDevTools: true })
+import installExtension from 'electron-devtools-installer'
+// Or if you can not use ES6 imports
+const { app } = require('electron')
+const { BrowserWindow } = require('electron')
 
-// Install `vue-devtools`
-require('electron').app.on('ready', () => {
-   const {
-      default: installExtension,
-      VUEJS_DEVTOOLS
-   } = require('electron-devtools-installer')
-   installExtension(VUEJS_DEVTOOLS)
+app.on('ready', () => {
+   installExtension('nhdogjmejiglipccpnnnanhbledajbpd')
       .then(name => console.log(`Added Extension:  ${name}`))
       .catch(err => console.log('An error occurred: ', err))
 })

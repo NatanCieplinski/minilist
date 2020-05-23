@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import '@/assets/variables'
+@import '~@/assets/variables'
 
 .fullscreen
   box-sizing: border-box

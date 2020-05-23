@@ -18,7 +18,7 @@ let mainConfig = {
          {
             test: /\.(js)$/,
             enforce: 'pre',
-            exclude: /node_modules/,
+            exclude: /node_modules | (index.ejs)/,
             use: {
                loader: 'eslint-loader',
                options: {
@@ -29,7 +29,7 @@ let mainConfig = {
          {
             test: /\.js$/,
             use: 'eslint-loader',
-            exclude: /node_modules/
+            exclude: /node_modules | (index.ejs)/
          },
          {
             test: /\.node$/,
