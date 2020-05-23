@@ -22,6 +22,38 @@ module.exports = {
          {
             order: ['template', 'script', 'style']
          }
+      ],
+      'vue/max-attributes-per-line': [
+         'error',
+         { singleline: 3, multiline: { max: 1, allowFirstLine: true } }
+      ],
+      'vue/html-indent': ['error', 3, {}],
+      'vue/html-closing-bracket-spacing': [
+         'error',
+         {
+            startTag: 'never',
+            endTag: 'never',
+            selfClosingTag: 'always'
+         }
+      ],
+      'vue/html-closing-bracket-newline': [
+         'error',
+         {
+            singleline: 'never',
+            multiline: 'never'
+         }
+      ],
+      'vue/html-self-closing': [
+         'error',
+         {
+            html: {
+               void: 'never',
+               normal: 'never',
+               component: 'always'
+            },
+            svg: 'always',
+            math: 'always'
+         }
       ]
    },
    extends: [
