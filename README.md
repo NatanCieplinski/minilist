@@ -1,5 +1,9 @@
-<h1 align="center">Minilist</h1>
-</br>
+<div align="center">
+<img style="width: 20%" src="./build/icons/icon.png" />
+</div>
+<p align="center" style="font-size: 48px;">Minilist</p>
+<p align="center" style="font-size: 28px">A simple and minimal to-do list 
+built with VueJS and Electron</p>
 <p align="center">
    <p align="center"> 
       <img alt="Repo status" src="https://img.shields.io/badge/Repo%20status-WIP-dbaf3b.svg" />
@@ -20,7 +24,6 @@
 </br>
 </br>
 
-> A simple and minimal to-do list
 
 #### Build Setup
 
