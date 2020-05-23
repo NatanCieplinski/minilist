@@ -13,11 +13,12 @@ export default {
 <style lang="sass">
 @import '~@/assets/variables'
 
-.fullscreen
-  box-sizing: border-box
-  height: calc(100% - #{$titlebar-height})
-  min-height: calc(100% - #{$titlebar-height})
-  min-width: 100%
-  padding: 8px
-  width: 100%
+#app
+   font-family: 'Poppins', sans-serif;
+   box-sizing: border-box
+   height: calc(100% - #{$titlebar-height})
+   min-height: calc(100% - #{$titlebar-height})
+   min-width: 100%
+   padding: 0px 16px 16px 16px
+   width: 100%
 </style>
