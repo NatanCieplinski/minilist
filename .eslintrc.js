@@ -15,8 +15,8 @@ module.exports = {
    plugins: ['eslint-plugin-vue'],
    rules: {
       // allow debugger during development
-      'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
       indent: ['error', 3],
+      'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
       'vue/component-tags-order': [
          'error',
          {
