@@ -28,5 +28,12 @@ export default {
          const id = uuidv4()
       }
    },
-   getters: {}
+   getters: {
+      completed_todos(state) {
+         return state.todos.filter(todo => todo.completed)
+      },
+      todos_to_complete(state) {
+         return state.todos.filter(todo => !todo.completed)
+      }
+   }
 }

@@ -1,7 +1,7 @@
 <template>
    <div class="checkbox">
       <div class="border" @click="check">
-         <div class="inner" :class="{ checked: checked }">
+         <div class="inner" :class="{ checked: is_checked }">
             <BaseIcon width="14px" height="14px" color="#ffffff">
                <CheckIcon />
             </BaseIcon>
@@ -12,16 +12,25 @@
 
 <script>
 export default {
+   props: {
+      checked: {
+         type: Boolean,
+         default: false
+      }
+   },
    data() {
       return {
-         checked: false
+         is_checked: null
       }
    },
    methods: {
       check() {
-         this.$emit('check', this.checked)
-         this.checked = !this.checked
+         this.$emit('check', this.is_checked)
+         this.is_checked = !this.is_checked
       }
+   },
+   created() {
+      this.is_checked = this.checked
    }
 }
 </script>
