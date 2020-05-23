@@ -4,7 +4,9 @@
       <span>
          {{ todo.title }}
       </span>
-      
+      <BaseIcon v-if="todo.important">
+         <ExclamationIcon height="12" width="12" color="#fc6a6a" />
+      </BaseIcon>
    </div>
 </template>
 

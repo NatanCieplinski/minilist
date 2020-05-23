@@ -1,7 +1,11 @@
 <template>
    <div class="checkbox">
       <div class="border" @click="check">
-         <div class="inner" :class="{ checked: checked }"></div>
+         <div class="inner" :class="{ checked: checked }">
+            <BaseIcon width="14px" height="14px" color="#ffffff">
+               <CheckIcon />
+            </BaseIcon>
+         </div>
       </div>
    </div>
 </template>
@@ -27,11 +31,11 @@ export default {
   display: flex
   align-items: center
   >.border
-    width: 24px
-    height: 24px
+    width: 20px
+    height: 20px
     box-sizing: border-box
-    border: 4px solid #248ffd
-    border-radius: 10px
+    border: 3px solid #248ffd
+    border-radius: 9px
     padding: 0px
     display: flex
     align-items: center
@@ -41,6 +45,9 @@ export default {
       background-color: #248ffd
       width: 0px
       height: 0px
+      display: flex
+      align-items: center
+      justify-content: center
     .checked
       transition: .1s width height linear
       width: 20px
