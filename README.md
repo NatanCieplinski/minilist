@@ -9,6 +9,9 @@
       <a href="https://vuejs.org/">
          <img alt="Made with vue" src="https://img.shields.io/badge/Made%20with-Vue-27b183.svg" />
       </a>
+      <a href="https://vuejs.org/">
+         <img alt="Made with electron" src="https://img.shields.io/badge/Made%20with-Electron-a0ebf9.svg" />
+      </a>
       <a href="https://code.visualstudio.com/">
          <img alt="Made on VSCode" src="https://img.shields.io/badge/Made%20on-VSCode-00aaed.svg" />
       </a>

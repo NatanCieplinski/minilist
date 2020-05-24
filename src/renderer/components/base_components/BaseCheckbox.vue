@@ -23,14 +23,14 @@ export default {
          is_checked: null
       }
    },
+   created() {
+      this.is_checked = this.checked
+   },
    methods: {
       check() {
          this.$emit('check', this.is_checked)
          this.is_checked = !this.is_checked
       }
-   },
-   created() {
-      this.is_checked = this.checked
    }
 }
 </script>

@@ -11,12 +11,13 @@
 import installExtension from 'electron-devtools-installer'
 // Or if you can not use ES6 imports
 const { app } = require('electron')
-const { BrowserWindow } = require('electron')
 
 app.on('ready', () => {
    installExtension('nhdogjmejiglipccpnnnanhbledajbpd')
       .then(name => console.log(`Added Extension:  ${name}`))
       .catch(err => console.log('An error occurred: ', err))
+   //Install devtron devtools
+   require('devtron').install()
 })
 
 // Require `main` process to boot app
